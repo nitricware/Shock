@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 import MapKit
+import UIKit
 
 class Shock {
     var context: NSManagedObjectContext
@@ -16,21 +17,21 @@ class Shock {
     var defis: [NSManagedObject]?
     var annotations: [Defi] = []
     
-    init(context: NSManagedObjectContext) {
-        self.context = context
+    init() {
+        self.context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     }
     
-    func clearDatabase(entity: String) {
+    func clearDatabase(entity: String) throws -> Void {
         let ReqVar = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
         let DelAllReqVar = NSBatchDeleteRequest(fetchRequest: ReqVar)
         do {
             try context.execute(DelAllReqVar)
         } catch {
-            print(error)
+            throw ShockException.DatabaseClearError
         }
     }
     
-    func fetchDefibrillatorsFromURL() -> Void {
+    func fetchDefibrillatorsFromURL() throws -> DefiJSONRootStruct? {
         let lastupdate = UserDefaults.standard.object(forKey: "lastupdate") as? Date ?? Date()
         let initialupdate = UserDefaults.standard.bool(forKey: "initialupdate")
         if (!initialupdate || lastupdate.addingTimeInterval(2629800) <= Date()) {
@@ -40,45 +41,52 @@ class Shock {
                     let decoder = JSONDecoder()
                     do {
                         let defis = try decoder.decode(DefiJSONRootStruct.self, from: json)
-                        clearDatabase(entity: "Defis")
-                        defis.features!.forEach { feature in
-                            let defi = NSEntityDescription.insertNewObject(forEntityName: "Defis", into: context)
-                            
-                            defi.setValue(feature.properties?.ADRESSE?.replacingOccurrences(of: "<br>", with: "\n"), forKey: "address")
-                            defi.setValue(feature.properties?.HINWEIS?.replacingOccurrences(of: "<br>", with: "\n"), forKey: "details")
-                            defi.setValue(feature.properties?.BEZIRK , forKey: "district")
-                            defi.setValue(feature.properties?.INFO?.replacingOccurrences(of: "<br>", with: "\n") , forKey: "info")
-                            defi.setValue(feature.geometry?.coordinates![1] , forKey: "lat")
-                            defi.setValue(feature.geometry?.coordinates![0] , forKey: "long")
-                            defi.setValue(feature.properties?.OBJECTID, forKey: "id")
-                            
-                            do {
-                                try context.save()
-                                UserDefaults.standard.set(Date(), forKey: "lastupdate")
-                                UserDefaults.standard.set(true, forKey: "initialupdate")
-                            } catch {
-                                print("Error Saving")
-                            }
-                        }
+                        
+                        return defis
                     } catch {
-                        print("Error parsing JSON data")
+                        throw ShockException.JSONParsingError
                     }
                 } catch {
-                    print("Error getting data");
+                    throw ShockException.DownloadError
                 }
             } else {
-                print("Error creating URL.")
+                throw ShockException.URLCreationError
+            }
+        } else {
+            return nil
+        }
+    }
+    
+    func saveDefibrillatorsToDatabase(defis: DefiJSONRootStruct) throws -> Void {
+        try defis.features!.forEach { feature in
+            let defi = NSEntityDescription.insertNewObject(forEntityName: "Defis", into: context)
+            
+            defi.setValue(feature.properties?.ADRESSE?.replacingOccurrences(of: "<br>", with: "\n"), forKey: "address")
+            defi.setValue(feature.properties?.HINWEIS?.replacingOccurrences(of: "<br>", with: "\n"), forKey: "details")
+            defi.setValue(feature.properties?.BEZIRK , forKey: "district")
+            defi.setValue(feature.properties?.INFO?.replacingOccurrences(of: "<br>", with: "\n") , forKey: "info")
+            defi.setValue(feature.geometry?.coordinates![1] , forKey: "lat")
+            defi.setValue(feature.geometry?.coordinates![0] , forKey: "long")
+            defi.setValue(feature.properties?.OBJECTID, forKey: "id")
+            
+            do {
+                try context.save()
+                
+                UserDefaults.standard.set(Date(), forKey: "lastupdate")
+                UserDefaults.standard.set(true, forKey: "initialupdate")
+            } catch {
+                throw ShockException.DatabaseSaveError
             }
         }
     }
     
-    func fetchDefibrillatorsFromDatabase() -> Void {
+    func fetchDefibrillatorsFromDatabase() throws -> Void {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Defis")
         request.returnsObjectsAsFaults = false
         do {
             defis = try context.fetch(request) as? [NSManagedObject]
         } catch {
-            print("Can't load Defibrillators from Database")
+            throw ShockException.DatabaseLoadError
         }
     }
     

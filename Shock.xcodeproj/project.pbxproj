@@ -19,6 +19,7 @@
 		4530E102226E1C10002BE887 /* Defi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4530E101226E1C10002BE887 /* Defi.swift */; };
 		4530E10C226E27F2002BE887 /* DefiDetailCalloutAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4530E10B226E27F2002BE887 /* DefiDetailCalloutAccessoryView.xib */; };
 		4530E10E226E285E002BE887 /* DefiDetailCalloutAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4530E10D226E285E002BE887 /* DefiDetailCalloutAccessoryView.swift */; };
+		45AB0471227A02CA0014BBDB /* ShockException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AB0470227A02CA0014BBDB /* ShockException.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		4530E101226E1C10002BE887 /* Defi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defi.swift; sourceTree = "<group>"; };
 		4530E10B226E27F2002BE887 /* DefiDetailCalloutAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefiDetailCalloutAccessoryView.xib; sourceTree = "<group>"; };
 		4530E10D226E285E002BE887 /* DefiDetailCalloutAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefiDetailCalloutAccessoryView.swift; sourceTree = "<group>"; };
+		45AB0470227A02CA0014BBDB /* ShockException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShockException.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,20 +71,45 @@
 			isa = PBXGroup;
 			children = (
 				4530E0E6226E041A002BE887 /* AppDelegate.swift */,
-				4530E0E8226E041A002BE887 /* ViewController.swift */,
-				4530E0EA226E041A002BE887 /* Main.storyboard */,
+				45AB0475227B65C40014BBDB /* ViewControllers */,
+				45AB0474227B65B60014BBDB /* Views */,
 				4530E0F0226E041B002BE887 /* Assets.xcassets */,
-				4530E0F2226E041B002BE887 /* LaunchScreen.storyboard */,
 				4530E0F5226E041B002BE887 /* Info.plist */,
 				4530E0ED226E041A002BE887 /* Shock.xcdatamodeld */,
 				4530E0FB226E0540002BE887 /* Shock.swift */,
-				4530E0FD226E073C002BE887 /* DefiJSONStruct.swift */,
-				4530E101226E1C10002BE887 /* Defi.swift */,
-				4530E10B226E27F2002BE887 /* DefiDetailCalloutAccessoryView.xib */,
-				4530E10D226E285E002BE887 /* DefiDetailCalloutAccessoryView.swift */,
-				4511C6BA22739A87009E321A /* CPRInstructions.swift */,
+				45AB0476227B65DE0014BBDB /* Structs */,
 			);
 			path = Shock;
+			sourceTree = "<group>";
+		};
+		45AB0474227B65B60014BBDB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4530E0EA226E041A002BE887 /* Main.storyboard */,
+				4530E0F2226E041B002BE887 /* LaunchScreen.storyboard */,
+				4530E10B226E27F2002BE887 /* DefiDetailCalloutAccessoryView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		45AB0475227B65C40014BBDB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4511C6BA22739A87009E321A /* CPRInstructions.swift */,
+				4530E0E8226E041A002BE887 /* ViewController.swift */,
+				4530E10D226E285E002BE887 /* DefiDetailCalloutAccessoryView.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		45AB0476227B65DE0014BBDB /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				4530E0FD226E073C002BE887 /* DefiJSONStruct.swift */,
+				4530E101226E1C10002BE887 /* Defi.swift */,
+				45AB0470227A02CA0014BBDB /* ShockException.swift */,
+			);
+			path = Structs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +186,7 @@
 			files = (
 				4530E0FE226E073C002BE887 /* DefiJSONStruct.swift in Sources */,
 				4530E0EF226E041A002BE887 /* Shock.xcdatamodeld in Sources */,
+				45AB0471227A02CA0014BBDB /* ShockException.swift in Sources */,
 				4530E10E226E285E002BE887 /* DefiDetailCalloutAccessoryView.swift in Sources */,
 				4530E0E9226E041A002BE887 /* ViewController.swift in Sources */,
 				4530E102226E1C10002BE887 /* Defi.swift in Sources */,
@@ -311,12 +339,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = PMCWJ9GD9L;
 				INFOPLIST_FILE = Shock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitricware.Shock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -329,12 +359,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = PMCWJ9GD9L;
 				INFOPLIST_FILE = Shock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitricware.Shock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
