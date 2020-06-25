@@ -19,6 +19,8 @@
 		4530E102226E1C10002BE887 /* Defi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4530E101226E1C10002BE887 /* Defi.swift */; };
 		4530E10C226E27F2002BE887 /* DefiDetailCalloutAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4530E10B226E27F2002BE887 /* DefiDetailCalloutAccessoryView.xib */; };
 		4530E10E226E285E002BE887 /* DefiDetailCalloutAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4530E10D226E285E002BE887 /* DefiDetailCalloutAccessoryView.swift */; };
+		4561E29924A4F00900D1828D /* SB2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4561E29824A4F00900D1828D /* SB2.storyboard */; };
+		4561E2BA24A4FA5C00D1828D /* DefiMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4561E2B924A4FA5C00D1828D /* DefiMap.storyboard */; };
 		45AB0471227A02CA0014BBDB /* ShockException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AB0470227A02CA0014BBDB /* ShockException.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		4530E101226E1C10002BE887 /* Defi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defi.swift; sourceTree = "<group>"; };
 		4530E10B226E27F2002BE887 /* DefiDetailCalloutAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefiDetailCalloutAccessoryView.xib; sourceTree = "<group>"; };
 		4530E10D226E285E002BE887 /* DefiDetailCalloutAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefiDetailCalloutAccessoryView.swift; sourceTree = "<group>"; };
+		4561E29824A4F00900D1828D /* SB2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SB2.storyboard; sourceTree = "<group>"; };
+		4561E2B924A4FA5C00D1828D /* DefiMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DefiMap.storyboard; sourceTree = "<group>"; };
 		45AB0470227A02CA0014BBDB /* ShockException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShockException.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +92,8 @@
 				4530E0EA226E041A002BE887 /* Main.storyboard */,
 				4530E0F2226E041B002BE887 /* LaunchScreen.storyboard */,
 				4530E10B226E27F2002BE887 /* DefiDetailCalloutAccessoryView.xib */,
+				4561E29824A4F00900D1828D /* SB2.storyboard */,
+				4561E2B924A4FA5C00D1828D /* DefiMap.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -138,7 +144,7 @@
 		4530E0DB226E041A002BE887 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Kurt Höblinger";
 				TargetAttributes = {
@@ -173,7 +179,9 @@
 				4530E10C226E27F2002BE887 /* DefiDetailCalloutAccessoryView.xib in Resources */,
 				4530E0F4226E041B002BE887 /* LaunchScreen.storyboard in Resources */,
 				4530E0F1226E041B002BE887 /* Assets.xcassets in Resources */,
+				4561E2BA24A4FA5C00D1828D /* DefiMap.storyboard in Resources */,
 				4530E0EC226E041A002BE887 /* Main.storyboard in Resources */,
+				4561E29924A4F00900D1828D /* SB2.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,14 +347,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = PMCWJ9GD9L;
 				INFOPLIST_FILE = Shock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitricware.Shock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -359,14 +367,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = PMCWJ9GD9L;
 				INFOPLIST_FILE = Shock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nitricware.Shock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -24,7 +24,9 @@
 	<string>Um die Defibrillatoren in Deiner Nähe anzeigen zu können, muss die App Dich orten können.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
+	<key>UIMainStoryboardFile~ipad</key>
+	<string>SB2</string>
+	<key>UIMainStoryboardFile~iphone</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
