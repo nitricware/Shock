@@ -18,6 +18,7 @@
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qw-zR-LUr">
                                 <rect key="frame" x="0.0" y="0.0" width="350" height="1366"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="xws-Zu-4IJ"/>
                                 </constraints>
@@ -32,7 +33,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ytS-hF-7ih" firstAttribute="top" secondItem="5MB-hr-lVA" secondAttribute="top" id="6Ib-1Z-Ye1"/>
                             <constraint firstAttribute="bottom" secondItem="ytS-hF-7ih" secondAttribute="bottom" id="7Rp-qp-ojP"/>
