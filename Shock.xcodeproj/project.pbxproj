@@ -10,7 +10,7 @@
 		4511C6BB22739A87009E321A /* CPRInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4511C6BA22739A87009E321A /* CPRInstructions.swift */; };
 		4530E0E7226E041A002BE887 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4530E0E6226E041A002BE887 /* AppDelegate.swift */; };
 		4530E0E9226E041A002BE887 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4530E0E8226E041A002BE887 /* ViewController.swift */; };
-		4530E0EC226E041A002BE887 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4530E0EA226E041A002BE887 /* Main.storyboard */; };
+		4530E0EC226E041A002BE887 /* iPhone Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4530E0EA226E041A002BE887 /* iPhone Storyboard.storyboard */; };
 		4530E0EF226E041A002BE887 /* Shock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4530E0ED226E041A002BE887 /* Shock.xcdatamodeld */; };
 		4530E0F1226E041B002BE887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4530E0F0226E041B002BE887 /* Assets.xcassets */; };
 		4530E0F4226E041B002BE887 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4530E0F2226E041B002BE887 /* LaunchScreen.storyboard */; };
@@ -19,8 +19,7 @@
 		4530E102226E1C10002BE887 /* Defi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4530E101226E1C10002BE887 /* Defi.swift */; };
 		4530E10C226E27F2002BE887 /* DefiDetailCalloutAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4530E10B226E27F2002BE887 /* DefiDetailCalloutAccessoryView.xib */; };
 		4530E10E226E285E002BE887 /* DefiDetailCalloutAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4530E10D226E285E002BE887 /* DefiDetailCalloutAccessoryView.swift */; };
-		4561E29924A4F00900D1828D /* SB2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4561E29824A4F00900D1828D /* SB2.storyboard */; };
-		4561E2BA24A4FA5C00D1828D /* DefiMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4561E2B924A4FA5C00D1828D /* DefiMap.storyboard */; };
+		4561E29924A4F00900D1828D /* iPad Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4561E29824A4F00900D1828D /* iPad Storyboard.storyboard */; };
 		45AB0471227A02CA0014BBDB /* ShockException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AB0470227A02CA0014BBDB /* ShockException.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +28,7 @@
 		4530E0E3226E041A002BE887 /* Shock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4530E0E6226E041A002BE887 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4530E0E8226E041A002BE887 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4530E0EB226E041A002BE887 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4530E0EB226E041A002BE887 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/iPhone Storyboard.storyboard"; sourceTree = "<group>"; };
 		4530E0EE226E041A002BE887 /* Shock.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shock.xcdatamodel; sourceTree = "<group>"; };
 		4530E0F0226E041B002BE887 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4530E0F3226E041B002BE887 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,8 +38,7 @@
 		4530E101226E1C10002BE887 /* Defi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defi.swift; sourceTree = "<group>"; };
 		4530E10B226E27F2002BE887 /* DefiDetailCalloutAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefiDetailCalloutAccessoryView.xib; sourceTree = "<group>"; };
 		4530E10D226E285E002BE887 /* DefiDetailCalloutAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefiDetailCalloutAccessoryView.swift; sourceTree = "<group>"; };
-		4561E29824A4F00900D1828D /* SB2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SB2.storyboard; sourceTree = "<group>"; };
-		4561E2B924A4FA5C00D1828D /* DefiMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DefiMap.storyboard; sourceTree = "<group>"; };
+		4561E29824A4F00900D1828D /* iPad Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "iPad Storyboard.storyboard"; sourceTree = "<group>"; };
 		45AB0470227A02CA0014BBDB /* ShockException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShockException.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,11 +87,10 @@
 		45AB0474227B65B60014BBDB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4530E0EA226E041A002BE887 /* Main.storyboard */,
+				4530E0EA226E041A002BE887 /* iPhone Storyboard.storyboard */,
 				4530E0F2226E041B002BE887 /* LaunchScreen.storyboard */,
 				4530E10B226E27F2002BE887 /* DefiDetailCalloutAccessoryView.xib */,
-				4561E29824A4F00900D1828D /* SB2.storyboard */,
-				4561E2B924A4FA5C00D1828D /* DefiMap.storyboard */,
+				4561E29824A4F00900D1828D /* iPad Storyboard.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,9 +176,8 @@
 				4530E10C226E27F2002BE887 /* DefiDetailCalloutAccessoryView.xib in Resources */,
 				4530E0F4226E041B002BE887 /* LaunchScreen.storyboard in Resources */,
 				4530E0F1226E041B002BE887 /* Assets.xcassets in Resources */,
-				4561E2BA24A4FA5C00D1828D /* DefiMap.storyboard in Resources */,
-				4530E0EC226E041A002BE887 /* Main.storyboard in Resources */,
-				4561E29924A4F00900D1828D /* SB2.storyboard in Resources */,
+				4530E0EC226E041A002BE887 /* iPhone Storyboard.storyboard in Resources */,
+				4561E29924A4F00900D1828D /* iPad Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,12 +203,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4530E0EA226E041A002BE887 /* Main.storyboard */ = {
+		4530E0EA226E041A002BE887 /* iPhone Storyboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4530E0EB226E041A002BE887 /* Base */,
 			);
-			name = Main.storyboard;
+			name = "iPhone Storyboard.storyboard";
 			sourceTree = "<group>";
 		};
 		4530E0F2226E041B002BE887 /* LaunchScreen.storyboard */ = {
